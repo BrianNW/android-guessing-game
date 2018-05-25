@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="ca.briannw.guessinggame.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="182dp"
+        android:layout_height="61dp"
+        android:layout_marginEnd="100dp"
+        android:ems="7"
+        android:inputType="textPersonName"
+        android:paddingLeft="0dp"
+        android:text="GUESSING GAME"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="e"
+        tools:layout_editor_absoluteX="440dp"
+        tools:layout_editor_absoluteY="404dp" />
+
+    <EditText
+        android:id="@+id/editText2"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="305dp"
+        android:layout_height="wrap_content"
+        android:ems="8"
+        android:inputType="textPersonName"
+        android:text="Enter a number between 1 and 100 : "
+        android:textAlignment="center"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="104dp" />
+
+    <EditText
+        android:id="@+id/txtGuess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="75dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textAlignment="center"
+        tools:layout_editor_absoluteX="155dp"
+        tools:layout_editor_absoluteY="178dp" />
+
+    <Button
+        android:id="@+id/btnGuess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GUESS"
+        android:textAlignment="center"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="251dp" />
+
+    <EditText
+        android:id="@+id/lblOutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="7"
+        android:inputType="textPersonName"
+        android:text="Guess a number!"
+        android:textAlignment="center"
+        tools:layout_editor_absoluteX="117dp"
+        tools:layout_editor_absoluteY="358dp" />
+</android.support.constraint.ConstraintLayout>

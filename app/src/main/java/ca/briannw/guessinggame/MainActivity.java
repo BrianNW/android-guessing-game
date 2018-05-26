@@ -18,6 +18,36 @@ public class MainActivity extends AppCompatActivity {
     private Button btnGuess;
     private TextView lblOutput;
 
+    private int theNumber;
+
+    public void checkGuess() {
+        //pulls number out that user typed in as a string
+        String theirNumber = txtGuess.getText().toString();
+        String message = "";
+
+        try{
+            //we parse the integer out of the string theirNumber
+            int guess =  Integer.parseInt(theirNumber);
+
+            if(guess > theNumber) { //too high
+                message = guess + " was too high. Guess again.";
+                lblOutput.setText(message);
+            } else if(guess < theNumber) { // too low
+                message = guess + " was too low. Guess again.";
+                lblOutput.setText(message);
+            } else { //number guessed correctly
+                message = guess + " was the right guess! Play again?";
+                lblOutput.setText(message);
+            }
+
+        }catch(Exception ex) {
+
+        }finally {
+
+        }
+
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

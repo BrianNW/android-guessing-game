@@ -41,12 +41,16 @@ public class MainActivity extends AppCompatActivity {
             }
 
         }catch(Exception ex) {
-
-        }finally {
+            message = "Couldn't understand that. Try again.";
+            lblOutput.setText(message);
+        }finally { //highlight the txtGuess text field
 
         }
+    }
 
-    };
+    private void newGame() {
+        theNumber = (int)(Math.random() * 100 + 1);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +60,16 @@ public class MainActivity extends AppCompatActivity {
         txtGuess = (EditText) findViewById(R.id.txtGuess);
         btnGuess = (Button) findViewById(R.id.btnGuess);
         lblOutput = (TextView) findViewById(R.id.lblOutput);
+
+        newGame();
+
+//        setup the event listener for the guess button
+        btnGuess.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                checkGuess();
+            }
+        });
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
